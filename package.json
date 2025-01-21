@@ -16,7 +16,6 @@
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "lodash.delay": "^4.1.1",
-    "lodash.groupby": "^4.6.0",
     "lodash.isnil": "^4.0.0",
     "mime-types": "^2.1.35",
     "motion": "^11.18.0",
@@ -32,7 +31,6 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/lodash.delay": "^4.1.9",
-    "@types/lodash.groupby": "^4.6.9",
     "@types/lodash.isnil": "^4.0.9",
     "@types/mime-types": "^2.1.4",
     "@types/node": "^20",
