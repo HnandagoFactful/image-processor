@@ -8,15 +8,15 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/en/home'
+        destination: '/en/image-process'
       },
       {
         source: '/home',
-        destination: '/en/home'
+        destination: '/en/image-process'
       },
       {
         source: '/en',
-        destination: '/en/home'
+        destination: '/en/image-process'
       },
     ]
   },

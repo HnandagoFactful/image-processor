@@ -1,84 +1,13 @@
 {
-    
-    "home": {
-        "global": {
-            "project": "Portfolio",
-            "navigation": [
-                {
-                    "name": "Home",
-                    "alias": "home",
-                    "path": "/en",
-                    "isVisible": true
-                },
-                {
-                    "name": "Detail",
-                    "alias": "detail",
-                    "path": "/en/detail",
-                    "isVisible": false
-                },
-                {
-                    "name": "JSON2SQL",
-                    "alias": "jsontosql",
-                    "path": "/en/json-to-sql",
-                    "isVisible": false
-                }
-            ]
-        },
-        "project": "Portfolio"
-    },
-    "jsontosql": {
-        "global": {
-            "project": "Portfolio",
-            "navigation": [
-                {
-                    "name": "Home",
-                    "alias": "home",
-                    "path": "/en",
-                    "isVisible": false
-                },
-                {
-                    "name": "Detail",
-                    "alias": "detail",
-                    "path": "/en/detail",
-                    "isVisible": true
-                },
-                {
-                    "name": "JSON2SQL",
-                    "alias": "jsontosql",
-                    "path": "/en/json-to-sql",
-                    "isVisible": false
-                }
-            ]
-        },
-        "project": "Portfolio"
-    },
     "imageprocessor": {
         "global": {
             "project": "Image Manipulator",
             "navigation": [
                 {
-                    "name": "Home",
-                    "alias": "home",
-                    "path": "/en",
-                    "isVisible": false
-                },
-                {
                     "name": "Images",
                     "alias": "imageprocessor",
                     "path": "/en/image-process",
                     "isVisible": true
-                },
-                {
-                    "name": "Detail",
-                    "alias": "detail",
-                    "path": "/en/detail",
-                    "isVisible": false
-                },
-                {
-                    "name": "JSON2SQL",
-                    "alias": "jsontosql",
-                    "path": "/en/json-to-sql",
-                    "isVisible": false
                 }
             ]
         },

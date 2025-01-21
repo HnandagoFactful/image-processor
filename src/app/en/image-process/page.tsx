@@ -10,7 +10,7 @@ const ImageViewer = dynamic(() => import("@/views/image-processor/ImageViewer"),
 });
  
 
-export default function JsonToSql() {
+export default function ImageProcess() {
     const {
         alert,
         resetAlert,

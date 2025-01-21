@@ -1,16 +1,10 @@
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 export default createMiddleware(routing);
 
-export function middleware(req: NextRequest) {
-  const url = req.nextUrl
-  const { pathname } = url
-  if (pathname.includes(`json-to-sql`)) {
-    return NextResponse.redirect(new URL('/en', req.url))
-  }
-
+export function middleware() {
   return NextResponse.next()
 
 }
