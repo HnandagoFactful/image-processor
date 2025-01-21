@@ -13,6 +13,7 @@ export default function ContainerLayout({ children, pageName }: { children: Reac
     const t = useTranslations(pageName)
     const [scrollPosition, setScrollPOsition] = useState<number>(0);
     const onScroll = function (event: any) {
+        console.log(event)
         setScrollPOsition(event.srcElement.scrollTop)
     }
     useEffect(function () {
@@ -25,20 +26,23 @@ export default function ContainerLayout({ children, pageName }: { children: Reac
             }
         }
     }, [])
+
+    console.log(scrollPosition)
     
     return (
         <TranslationProvider.Provider value={{
             pageName,
             translation: undefined
         }}>
-            <Section className="h-screen w-screen p-0 !pt-0 overflow-y-auto overflow-x-hidden">
+            <Section className="h-screen w-screen p-0 overflow-hidden !pt-0">
                 <Flex id="nav-bar" direction={'column'}
                     justify={"center"}
                     gap="1"
-                    className={clsx("p-0")}
+                    className={clsx("p-0", {
+                        "border-b border-lime-100": scrollPosition < 10
+                    })}
                     style={{
-                        borderBottom: "1px solid var(--lime-9)",
-                        boxShadow: scrollPosition > 10 ? "-2px 2px 8px -2px var(--lime-9)" : "unset",
+                        boxShadow: scrollPosition > 10 ? "inset 0 0px 4px 0 var(--lime-9)" : "unset",
                     }}>
                     <Flex height={"60px"}
                         direction={"row"}
@@ -55,7 +59,7 @@ export default function ContainerLayout({ children, pageName }: { children: Reac
                         </Flex>
                     </Flex>
                 </Flex>
-                <Section className="relative !pt-4">
+                <Section ref={layoutContentRef}  className="relative !pt-4 overflow-y-auto overflow-x-hidden h-[97vh]">
                     {children}
                 </Section>
             </Section>
