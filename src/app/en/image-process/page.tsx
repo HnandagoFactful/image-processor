@@ -17,6 +17,8 @@ export default function ImageProcess() {
         setAlertContentType
     } = useAlerts()
 
+    console.log(process.env)
+
     return (<pageProvider.Provider value={{
         pageName: 'imageprocessor',
         ...alert,
