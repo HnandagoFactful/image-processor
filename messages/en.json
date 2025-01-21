@@ -1,0 +1,100 @@
+{
+    
+    "home": {
+        "global": {
+            "project": "Portfolio",
+            "navigation": [
+                {
+                    "name": "Home",
+                    "alias": "home",
+                    "path": "/en",
+                    "isVisible": true
+                },
+                {
+                    "name": "Detail",
+                    "alias": "detail",
+                    "path": "/en/detail",
+                    "isVisible": false
+                },
+                {
+                    "name": "JSON2SQL",
+                    "alias": "jsontosql",
+                    "path": "/en/json-to-sql",
+                    "isVisible": false
+                }
+            ]
+        },
+        "project": "Portfolio"
+    },
+    "jsontosql": {
+        "global": {
+            "project": "Portfolio",
+            "navigation": [
+                {
+                    "name": "Home",
+                    "alias": "home",
+                    "path": "/en",
+                    "isVisible": false
+                },
+                {
+                    "name": "Detail",
+                    "alias": "detail",
+                    "path": "/en/detail",
+                    "isVisible": true
+                },
+                {
+                    "name": "JSON2SQL",
+                    "alias": "jsontosql",
+                    "path": "/en/json-to-sql",
+                    "isVisible": false
+                }
+            ]
+        },
+        "project": "Portfolio"
+    },
+    "imageprocessor": {
+        "global": {
+            "project": "Image Manipulator",
+            "navigation": [
+                {
+                    "name": "Home",
+                    "alias": "home",
+                    "path": "/en",
+                    "isVisible": false
+                },
+                {
+                    "name": "Images",
+                    "alias": "imageprocessor",
+                    "path": "/en/image-process",
+                    "isVisible": true
+                },
+                {
+                    "name": "Detail",
+                    "alias": "detail",
+                    "path": "/en/detail",
+                    "isVisible": false
+                },
+                {
+                    "name": "JSON2SQL",
+                    "alias": "jsontosql",
+                    "path": "/en/json-to-sql",
+                    "isVisible": false
+                }
+            ]
+        },
+        "project": "Image Manipulator",
+        "cardDragNotification": "Card can be resized to view full image for cropping",
+        "uploadImage": "Upload Images",
+        "uploadImagePlaceholder": "Upload the images",
+        "uploadImageInputName": "Image uploader",
+        "imageExists": "Image already exists",
+        "aspectRatio": "Aspect Ratio",
+        "scale": "Scale",
+        "transitionX": "Move lef to right",
+        "transitionY": "Move up or down",
+        "allow": "Allow",
+        "allowInput": "Allow {input}",
+        "rotateImage": "Rotate image",
+        "increaseInput": "Increase {inputName}"
+    }
+}
