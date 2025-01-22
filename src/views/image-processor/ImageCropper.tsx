@@ -4,7 +4,7 @@ import ReactCrop, {
     Crop,
     PixelCrop
 } from "react-image-crop";
-import { Box } from "@radix-ui/themes";
+import { Box, Heading } from "@radix-ui/themes";
 import ImageProcessorProvider from "@/providers/ImageProcessorProvider";
 import CropperControls from "./CropperControls";
 import { centerAspectCrop, downloadImageFromPreview } from "./utils";
@@ -80,7 +80,8 @@ export default function ImageCropper() {
 
 
     if (!fileData) {
-      return null;
+      return (<Heading className="mx-auto my-0 h-[100%] w-[100%] flex items-center justify-center  text-center"
+          color="lime">Please upload an image & start working!</Heading>);
     }
 
     return (
@@ -98,41 +99,41 @@ export default function ImageCropper() {
           Hidden download
         </a>
         <CropperControls isCropDisabled={isCropDisabled}
-          aspectRatio={aspectRatio}
-          imgRef={imgRef}
-          rotate={rotate}
-          scale={scale}
-          completedCrop={completedCrop}
-          translateX={translateX}
-          translateY={translateY}
-          setTranslateX={setTranslateX}
-          setTranslateY={setTranslateY}
-          setIsCropDisabled={setIsCropDisabled}
-          setAspectRatio={setAspectRatio}
-          setScale={setScale}
-          setRotate={setRotate}
-          onDownload={onDownloadCropClick}
-          />
-        <ReactCrop
-          crop={crop}
-          onChange={(_, percentCrop) => {
-              setCrop(percentCrop)}
-          }
-          onComplete={(c) => setCompletedCrop(c)}
-          aspect={aspectRatio}
-          disabled={isCropDisabled}
-          minHeight={100}
-        >
-            <img
-                ref={imgRef}
-                alt="Crop me"
-                src={fileData}
-                width={"inherit"}
-                height={"inherit"}
-                style={{ transform: `scale(${scale}) rotate(${rotate}deg) translateX(${translateX}px) translateY(${translateY}px)` }}
-                onLoad={onImageLoad}
+            aspectRatio={aspectRatio}
+            imgRef={imgRef}
+            rotate={rotate}
+            scale={scale}
+            completedCrop={completedCrop}
+            translateX={translateX}
+            translateY={translateY}
+            setTranslateX={setTranslateX}
+            setTranslateY={setTranslateY}
+            setIsCropDisabled={setIsCropDisabled}
+            setAspectRatio={setAspectRatio}
+            setScale={setScale}
+            setRotate={setRotate}
+            onDownload={onDownloadCropClick}
             />
-        </ReactCrop>
+          <ReactCrop
+            crop={crop}
+            onChange={(_, percentCrop) => {
+                setCrop(percentCrop)}
+            }
+            onComplete={(c) => setCompletedCrop(c)}
+            aspect={aspectRatio}
+            disabled={isCropDisabled}
+            minHeight={100}
+          >
+              <img
+                  ref={imgRef}
+                  alt="Crop me"
+                  src={fileData}
+                  width={"inherit"}
+                  height={"inherit"}
+                  style={{ transform: `scale(${scale}) rotate(${rotate}deg) translateX(${translateX}px) translateY(${translateY}px)` }}
+                  onLoad={onImageLoad}
+              />
+          </ReactCrop>
       </Box>
     );
 }

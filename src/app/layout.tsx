@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Factful: Image Resizer',
+    title: 'Factful: MakeMyPic',
     description: 'Personal website for Harikrishna',
 }
 
