@@ -114,6 +114,7 @@ export default function ConversionControls() {
                 </Text>
                 <Flex gap="2" wrap={"wrap"}>
                     <TextField.Root placeholder="Resize Height" type="number"
+                        disabled={selectedImageFormat === 'pdf'}
                         value={resize.height} onChange={(event: ChangeEvent<HTMLInputElement>) => {
                         setResize({
                             ...resize,
@@ -123,6 +124,7 @@ export default function ConversionControls() {
                         <TextField.Slot color="lime" className="bg-gray-700 rounded mr-1 ml-[0.5px] text-xs">Resize height</TextField.Slot>
                     </TextField.Root>
                     <TextField.Root placeholder="Resize Width"  type="number"
+                        disabled={selectedImageFormat === 'pdf'}
                         value={resize.width} onChange={(event: ChangeEvent<HTMLInputElement>) => {
                         setResize({
                             ...resize,

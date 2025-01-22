@@ -14,7 +14,7 @@ export default async function imageConversion({
 }) {
     const form = new FormData()
     form.append('file', data)
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/images?resize${resize}&format=${format}&flip=${flip}`, form,  {
+    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/images?resize=${resize}&format=${format}&flip=${flip}`, form,  {
         responseType: 'blob'
     })
     const variant = mimeTypes.lookup(format);

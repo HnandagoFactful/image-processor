@@ -1,17 +1,17 @@
 {
     "imageprocessor": {
         "global": {
-            "project": "Image Manipulator",
+            "project": "MakeMyPic",
             "navigation": [
                 {
                     "name": "Images",
                     "alias": "imageprocessor",
                     "path": "/en/image-process",
-                    "isVisible": true
+                    "isVisible": false
                 }
             ]
         },
-        "project": "Image Manipulator",
+        "project": "MakeMyPic",
         "cardDragNotification": "Card can be resized to view full image for cropping",
         "uploadImage": "Upload Images",
         "uploadImagePlaceholder": "Upload the images",
