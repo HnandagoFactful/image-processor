@@ -14,6 +14,7 @@ import 'react-resizable/css/styles.css'
 import clsx from "clsx";
 
 export default function CollageMaker() {
+    const downloaderRef = useRef<HTMLAnchorElement | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
     const [files, setFiles] = useState<File[]>([]);
@@ -42,7 +43,12 @@ export default function CollageMaker() {
             html2canvas(containerRef.current, {
                 backgroundColor: color.toString()
             }).then(function (canvas: HTMLCanvasElement) {
-                document.getElementById('preview-canvas')?.appendChild(canvas)
+                if (downloaderRef.current) {
+                    
+                    downloaderRef.current.setAttribute('download', 'downloader.png');
+                    downloaderRef.current.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                    downloaderRef.current.click()
+                }
             });
         }
     }, [
@@ -52,6 +58,10 @@ export default function CollageMaker() {
 
     return (<Section className="!pt-2 pl-4 pr-4 !pb-0">
         <Heading>Make your own collage</Heading>
+        
+        <VisuallyHidden>
+            <a ref={downloaderRef} id={'downloader'} />
+        </VisuallyHidden>
         <Flex direction={"column"} gap="4">
             <Box className="relative">
                 <Text>Images added: </Text>
