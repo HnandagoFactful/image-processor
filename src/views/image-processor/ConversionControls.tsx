@@ -46,9 +46,9 @@ export default function ConversionControls() {
                     throw 'Error';
                 }
             }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch(e) {
             transition(() => {
-                console.log(e);
                 setIsApiDispatched(false);
                 pageContext.setAlertContentType('Failed to convert image',  'error')
             });
