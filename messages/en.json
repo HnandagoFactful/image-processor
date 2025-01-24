@@ -4,10 +4,13 @@
             "project": "MakeMyPic",
             "navigation": [
                 {
-                    "name": "Images",
-                    "alias": "imageprocessor",
-                    "path": "/en/image-process",
-                    "isVisible": false
+                    "name": "Collage  Maker",
+                    "alias": "collagemaker",
+                    "path": "/en/collage-maker",
+                    "isVisible": true
+                },
+                {
+
                 }
             ]
         },
@@ -25,5 +28,22 @@
         "allowInput": "Allow {input}",
         "rotateImage": "Rotate image",
         "increaseInput": "Increase {inputName}"
+    },
+    "collagemaker": {
+        "global": {
+            "project": "MakeMyPic",
+            "navigation": [
+                {
+                    "name": "Home",
+                    "alias": "imageprocessor",
+                    "path": "/en/image-process",
+                    "isVisible": true
+                },
+                {
+                    
+                }
+            ]
+        },
+        "project": "MakeMyPic"
     }
 }

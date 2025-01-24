@@ -110,7 +110,6 @@ export default function CropperControls({
               step={1}
               value={translateX}
               defaultUpdater={(value: number) => {
-                console.log("default updater", value)
                 setTranslateX?.(value);
               }}
               onChange={(event: ChangeEvent<HTMLInputElement>) => {

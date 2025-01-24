@@ -13,7 +13,6 @@ export default function ContainerLayout({ children, pageName }: { children: Reac
     const t = useTranslations(pageName)
     const [scrollPosition, setScrollPOsition] = useState<number>(0);
     const onScroll = function (event: any) {
-        console.log(event)
         setScrollPOsition(event.srcElement.scrollTop)
     }
     useEffect(function () {
@@ -26,8 +25,6 @@ export default function ContainerLayout({ children, pageName }: { children: Reac
             }
         }
     }, [])
-
-    console.log(scrollPosition)
     
     return (
         <TranslationProvider.Provider value={{

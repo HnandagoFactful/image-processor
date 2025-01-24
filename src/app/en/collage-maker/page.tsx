@@ -5,7 +5,7 @@ import ContainerLayout from "@/components/globals/ContainerLayout";
 import pageProvider from "@/providers/PageProvider";
 import { ErrorBoundary } from "react-error-boundary";
 import useAlerts from "@/hooks/useAlerts";
-const ImageViewer = dynamic(() => import("@/views/image-processor/ImageViewer"), {
+const CollageMaker = dynamic(() => import("@/views/collage-maker/CollageMaker"), {
     ssr: false
 });
  
@@ -18,14 +18,14 @@ export default function ImageProcess() {
     } = useAlerts()
 
     return (<pageProvider.Provider value={{
-        pageName: 'imageprocessor',
+        pageName: 'collagemaker',
         ...alert,
         setAlertContentType,
         resetAlert
     }}>
-        <ContainerLayout pageName="imageprocessor">
+        <ContainerLayout pageName="collagemaker">
             <ErrorBoundary fallback={<div>Something went wrong</div>}>
-                <ImageViewer />
+                <CollageMaker />
             </ErrorBoundary>
         </ContainerLayout>
     </pageProvider.Provider>)

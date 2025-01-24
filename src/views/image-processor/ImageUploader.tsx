@@ -28,7 +28,6 @@ export default function ImageUploader() {
                             uploaderContext.setData(file)
                             
                         } else {
-                            console.log("else")
                             pageContext.setAlertContentType(translations("imageExists"), 'warning')
                         }
                     }
